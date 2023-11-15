@@ -1,28 +1,39 @@
-import React, { useEffect, useState } from 'react'
-import style from './main.module.scss';
-import { fetchPhotoData } from '../../store/action/getPhoto/action';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../store/reducer';
-import Loader from '../../components/loader/Loader';
-import ProductCard from '../../components/product-card/ProductCard';
+import React, { useEffect } from "react";
+import "./Main.scss";
+import { fetchPhotoData } from "../../store/action/getPhoto/action";
+import { useDispatch, useSelector } from "react-redux";
+import Loader from "../../components/loader/Loader";
+import ProductCard from "../../components/product-card/ProductCard";
+import SpecialPromotionModal from "../../components/modal/SpecialPromotionModal";
 const Main = () => {
+  const { loading, data } = useSelector((state: any) => state.getPhotoReducer);
 
-    const {loading, error, data} = useSelector((state:any) => state.getPhotoReducer)
+  const dispatch = useDispatch();
 
-    const dispatch = useDispatch()
-
-
-    useEffect(() => {
-        dispatch(fetchPhotoData())
-    },[dispatch])
+  useEffect(() => {
+    dispatch(fetchPhotoData());
+  }, [dispatch]);
 
   return (
-    <div className={style['main-container']}>
-      {loading ? <Loader /> : data?.photos?.map((photo:any) => (
-        <ProductCard url={photo.url} title={photo.title} user={photo.user} description={photo.description} id={photo.id} />
-      ))}
+    <div className="main-container">
+      <SpecialPromotionModal />
+      <div className="product-card-container">
+        {loading ? (
+          <Loader />
+        ) : (
+          data?.photos?.map((photo: any) => (
+            <ProductCard
+              url={photo.url}
+              title={photo.title}
+              user={photo.user}
+              description={photo.description}
+              id={photo.id}
+            />
+          ))
+        )}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

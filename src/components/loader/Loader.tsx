@@ -1,10 +1,10 @@
 import React from 'react';
-import style from './loader.module.scss';
+import './Loader.scss';
 
 const Loader = () => {
   return (
-    <div className={style['loader-overlay']}>
-      <div className={style['loader']}></div>
+    <div className='loader-overlay'>
+      <div className='loader'></div>
     </div>
   );
 };
