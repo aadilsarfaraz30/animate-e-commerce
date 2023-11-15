@@ -1,0 +1,22 @@
+.header-container{
+    background: #13357C;
+    height: 60px;
+    padding: 1.5rem 2rem;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+    .header-title{
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .header-navbar{
+        display: flex;
+        gap: 20px;
+    
+    }
+}
+
