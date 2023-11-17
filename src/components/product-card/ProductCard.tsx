@@ -24,7 +24,6 @@ const ProductCard = ({ url, title }: any) => {
     };
 
     if (cardRef.current) {
-      // Explicitly cast the event type to 'any' here
       cardRef.current.addEventListener('mousemove', handleMouseMove as any);
       cardRef.current.addEventListener('mouseleave', handleMouseLeave);
     }
