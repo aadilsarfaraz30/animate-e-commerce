@@ -31,6 +31,7 @@ const ProductCard = ({ url, title }: any) => {
     return () => {
       if (cardRef.current) {
         cardRef.current.removeEventListener('mousemove', handleMouseMove as any);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         cardRef.current.removeEventListener('mouseleave', handleMouseLeave);
       }
     };
