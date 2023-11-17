@@ -11,6 +11,7 @@ $product-image-border-radius: 8px;
   padding: $product-card-padding;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.05);
@@ -19,6 +20,11 @@ $product-image-border-radius: 8px;
   .product-image {
     width: 100%;
     border-radius: $product-image-border-radius;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: translate(-5%, -5%);
+    }
   }
 
   .product-details {
@@ -42,3 +48,4 @@ $product-image-border-radius: 8px;
     }
   }
 }
+
