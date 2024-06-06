@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useEffect, useRef } from 'react'
 import style from './OnlyImageScroll.module.css'
 import image1 from '../assest/product-image2.png'
