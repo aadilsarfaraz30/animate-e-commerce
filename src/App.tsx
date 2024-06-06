@@ -2,12 +2,36 @@ import React from 'react';
 import './App.scss';
 import Header from './layout/header/Header';
 import Main from './layout/main/Main';
+import img from './assest/dashboard-footer.png'
+import { ParallaxBanner } from 'react-scroll-parallax';
+import ParallaxSection from './components/ParallaxSection';
+import image from './assest/dashboard-footer.png'
+import OnlyImageScroll from './components/OnlyImageScroll';
+
 
 function App() {
   return (
-    <div className="App">
-        <Header/>
-        <Main/>
+    <div className="">
+        {/* <Header/>
+        <Main/> */}
+        {/* <img style={{
+          width: '100%',
+        }} src={img} alt="dashboard-footer"/> */}
+        {/* <ParallaxBanner  
+        // layers={[{ image: img, speed: -15 }]}
+        layers={[
+          {
+            image: 'https://laz-img-cdn.alicdn.com/images/ims-web/TB1LLFTsljTBKNjSZFuXXb0HFXa.jpg_1200x1200.jpg',
+            speed: -20,
+          },
+        ]}
+        style={{ aspectRatio: '2 / 1' }}
+        >
+        <
+        </ParallaxBanner> */}
+         {/* <ParallaxSection url={image}/>
+         <ParallaxSection url={"https://laz-img-cdn.alicdn.com/images/ims-web/TB1LLFTsljTBKNjSZFuXXb0HFXa.jpg_1200x1200.jpg"}/> */}
+    <OnlyImageScroll/>
     </div>
   );
 }

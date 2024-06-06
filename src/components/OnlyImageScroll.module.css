@@ -1,0 +1,23 @@
+.container{
+    height: 100vh;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.leftSection{
+    width: 45%;
+    height: 100%;
+    background-color: red;
+    overflow: scroll;
+}
+.rightSection{
+    width: 55%;
+    height: 100%;
+    background-color: blue;
+}
+.bottom{
+    width: 100%;
+    height: 100vh;
+    background-color: green;
+}

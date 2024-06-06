@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider } from 'react-redux';
 import store from './store/store';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,7 +13,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <Provider store={store}>
   <React.StrictMode>
+    <ParallaxProvider>
+
     <App />
+    </ParallaxProvider>
   </React.StrictMode>
   </Provider>,
 );
