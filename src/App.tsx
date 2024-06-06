@@ -1,11 +1,5 @@
 import React from 'react';
 import './App.scss';
-import Header from './layout/header/Header';
-import Main from './layout/main/Main';
-import img from './assest/dashboard-footer.png'
-import { ParallaxBanner } from 'react-scroll-parallax';
-import ParallaxSection from './components/ParallaxSection';
-import image from './assest/dashboard-footer.png'
 import OnlyImageScroll from './components/OnlyImageScroll';
 
 
